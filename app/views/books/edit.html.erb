@@ -1,18 +1,29 @@
-<h2>New book</h2>
-<div>
-<%= form_for (@book) do |f| %>
-    <%= f.label :title, "Title" %><br>
+  <%= form_for (@book) do |f| %>
+
+<div class="error_messages">
+  <% if f.object.errors.any? %>
+    <div class="error_explanation">
+      <h2><%= f.object.errors.count %>errors prohibited this book from being saved:</h2>
+      <ul>
+        <% f.object.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>
+<div class="form-text">
+    <%= label :title, "Title" %><br>
     <%= f.text_field :title %>
 </div>
-<div>
-    <%= f.label :title, "Body" %><br>
+<div class="form-text">
+    <%= label :body, "Body" %><br>
     <%= f.text_area :body %>
 </div>
-    <%= f.submit 'Create Book' %><br>
-<% end %>
-
+    <%= f.submit 'Create Book' %> 
 <div>
-<%= link_to  "Show", book_path(@book)  %>
+<%= link_to  "Show", book_path(@book),class: "link"  %>
 <sapan>|</span>
-<%= link_to  "Back", books_path(@book)  %>
+<%= link_to  "Back", books_path(@book),class: "link"  %>
 </div>
+<% end %>
