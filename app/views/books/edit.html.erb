@@ -1,4 +1,5 @@
-  <%= form_for (@book) do |f| %>
+<h1 class=edit-header>Editing Book</h1>
+<%= form_for (@book) do |f| %>
 
 <div class="error_messages">
   <% if f.object.errors.any? %>
@@ -8,7 +9,7 @@
         <% f.object.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
-      </ul>
+      </ul type="square">
     </div>
   <% end %>
 </div>
@@ -20,8 +21,8 @@
     <%= label :body, "Body" %><br>
     <%= f.text_area :body %>
 </div>
-    <%= f.submit 'Create Book' %> 
-<div>
+    <%= f.submit 'Update Book' %>
+<div class="show-link">
 <%= link_to  "Show", book_path(@book),class: "link"  %>
 <sapan>|</span>
 <%= link_to  "Back", books_path(@book),class: "link"  %>

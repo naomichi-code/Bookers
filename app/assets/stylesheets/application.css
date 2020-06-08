@@ -55,3 +55,14 @@ margin:30px;
 .flash-text{
     color: rgb(59, 192, 59);
 }
+.show-link{
+    margin-top: 10px;
+}
+.edit-header{
+margin-bottom: 20px;
+}
+.error_messages{
+    border: 1px solid ;
+    border-color: red;
+    background-color: hotpink;
+}
