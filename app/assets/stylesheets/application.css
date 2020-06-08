@@ -63,6 +63,6 @@ margin-bottom: 20px;
 }
 .error_messages{
     border: 1px solid ;
-    border-color: red;
+    /*border-color: red;*/
     background-color: hotpink;
 }
